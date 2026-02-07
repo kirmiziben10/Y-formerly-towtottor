@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./index.css";
 import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed"
+import Trending from "./components/Trending"
 import { Sun, Moon } from "lucide-react";
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
       }
     >
       <Sidebar />
-
+      <Feed/>
+      <Trending/>
       {/*dark-mode toggle*/}
       <div className="bg-zinc-300 dark:bg-zinc-700 bottom-2 right-2 absolute flex place-items-center rounded p-1">
         <button className="p-1 rounded hover:bg-zinc-400" onClick={manageTheme}>
