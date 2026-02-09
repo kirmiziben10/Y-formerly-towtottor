@@ -6,7 +6,7 @@ export default function Newpost() {
       <div className="flex flex-row items-start">
         <div className="flex place-items-center size-15 ml-2">
           <img
-            className="bg-white dark:bg-black size-12 object-contain rounded-full resize-none"
+            className="bg-white dark:bg-black size-11 object-contain rounded-full"
             src="https://cdn.freebiesupply.com/logos/thumbs/2x/linux-tux-1-logo.png"
             alt="Profile picture"
           />

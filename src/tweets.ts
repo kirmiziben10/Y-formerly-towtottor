@@ -1,4 +1,15 @@
-export const tweets = [
+export interface Tweet {
+    id: string;
+    user_id: string; 
+    content: string;
+    likes: number;
+    retweets: number;
+    timestamp: string;
+    reply_to?:string;
+    image?:string;
+}
+
+export const tweets: Tweet[] = [
   {
     "id": "t_001",
     "user_id": "u_1",
