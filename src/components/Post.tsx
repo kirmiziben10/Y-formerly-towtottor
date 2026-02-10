@@ -7,7 +7,7 @@ export default function Post({tweet}: {tweet: Tweet}) {
   console.log(tweet);
   const user = users.find(user => user.id === tweet.user_id)
   return (
-    <div className="w-149.5 h-fit flex border-zinc-700 border-b">
+    <div className="w-149.5 h-fit flex border-zinc-800 border-b">
       <div className="flex items-start justify-center w-15 shrink-0">
         <a href={user?.handle}><img className="bg-white dark:bg-black size-11.5 mt-2.5 object-contain rounded-full" src={user?.avatar} alt="" /></a>
       </div>

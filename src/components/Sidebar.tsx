@@ -6,7 +6,7 @@ export default function Sidebar() {
     "p-3.5 m-0.5 ml-1.5 pr-6 h-11.5 text-xl rounded-full inline-flex flex-row justify-start items-center hover:bg-zinc-300 dark:hover:bg-zinc-700";
   const iconSize = "28px"
     return (
-    <header className="flex">
+    <header className="flex border-r border-zinc-800 h-screen self-start sticky top-0">
       <div className="flex flex-col items-start right w-68.75">
         
         <div className="flex ml-1.5 items-center justify-center text-4xl font-bold font-sans size-14">

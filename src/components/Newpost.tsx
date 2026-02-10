@@ -2,7 +2,7 @@ import "../index.css";
 import { Image, MapPin} from "lucide-react"
 export default function Newpost() {
   return (
-    <section className="flex flex-col h-30 w-full border-zinc-700 border-b">
+    <section className="flex flex-col h-30 w-full border-zinc-800 border-b">
       <div className="flex flex-row items-start">
         <div className="flex place-items-center size-15 ml-2">
           <img
