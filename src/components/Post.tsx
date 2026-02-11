@@ -6,7 +6,7 @@ export default function Post({ tweet }: { tweet: Tweet }) {
   console.log(tweet);
   const user = users.find((user) => user.id === tweet.user_id);
   return (
-    <div className="w-149.5 h-fit flex border-zinc-800 border-b">
+    <div className="w-149.5 h-fit flex border-zinc-300 dark:border-zinc-800 border-b">
       <div className="flex items-start justify-center w-15 shrink-0">
         <a href={user?.handle}>
           <img
@@ -18,8 +18,10 @@ export default function Post({ tweet }: { tweet: Tweet }) {
       </div>
       <div>
         <div className="flex flex-row justify-start mt-2.5 ml-2">
-          {user?.name} <span className="opacity-50">{user?.handle}</span>{" "}
-          <div className="justify-self-end ml-auto mr-4">
+          <div className="cursor-pointer">
+            {user?.name} <span className="opacity-50">{user?.handle}</span>
+          </div>
+          <div className="justify-self-end ml-auto mr-4 cursor-pointer">
             <Ellipsis />
           </div>
         </div>

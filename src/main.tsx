@@ -1,12 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from './ThemeContext';
 import App from './App'
 import Profile from "./Profile"
 import Notifications from './Notifications';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  <ThemeProvider> <StrictMode>
         <BrowserRouter>
         {/* Routes */}
         <Routes>
@@ -15,5 +16,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/notifications" element={<Notifications />} />
         </Routes>
       </BrowserRouter>
-  </StrictMode>,
+  </StrictMode> </ThemeProvider>
+  ,
 )

@@ -9,11 +9,11 @@ import type { Tweet } from "../tweets.ts"
 export default function Feed() {
   return (
     <main className="flex flex-row space-between content-between w-262.5">
-      <div className="flex flex-col w-150 border-zinc-800 border-r">
-        <div className="flex flex-row items-center justify-evenly backdrop-blur-sm z-50 w-full h-13.5 border-zinc-800 border-b shrink-0 sticky top-0">
-          <div className="flex w-1/2 items-center justify-center h-full border-zinc-800">
+      <div className="flex flex-col w-150 border-zinc-300 dark:border-zinc-800 border-r">
+        <div className="flex flex-row items-center justify-evenly backdrop-blur-sm z-50 w-full h-13.5 border-zinc-300 dark:border-zinc-800 border-b shrink-0 sticky top-0">
+          <div className="flex w-1/2 items-center justify-center h-full border-zinc-300 dark:border-zinc-800">
             <div className="flex flex-col h-full">
-              <div className="flex h-full place-items-center">
+              <div className="flex h-full place-items-center cursor-pointer">
                 <h1 className="inline">For you</h1>
               </div>
               <div className="w-full bg-black dark:bg-white h-1 rounded-full"></div>
@@ -21,7 +21,7 @@ export default function Feed() {
           </div>
           <div className="flex w-1/2 items-center justify-center h-full">
             <div className="flex flex-col h-full">
-              <div className="flex h-full place-items-center">
+              <div className="flex h-full place-items-center cursor-pointer">
                 <h1 className="inline">Following</h1>
               </div>
               <div className="w-full bg-black dark:bg-white h-1 rounded-full"></div>

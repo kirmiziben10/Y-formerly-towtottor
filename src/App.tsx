@@ -1,16 +1,16 @@
-import { useState } from "react";
-
+import { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 import { Sun, Moon } from "lucide-react";
 import "./index.css";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Feed";
 
 function App() {
-  const [theme, setTheme] = useState("");
+  const { theme, setTheme } = useContext(ThemeContext);
+  
   function manageTheme() {
     theme === "dark" ? setTheme("") : setTheme("dark");
   }
-
   return (
     <div
       className={
