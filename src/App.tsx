@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "./ThemeContext";
 import { Sun, Moon } from "lucide-react";
 import "./index.css";
@@ -7,7 +7,7 @@ import Main from "./components/Feed";
 
 function App() {
   const { theme, setTheme } = useContext(ThemeContext);
-  
+
   function manageTheme() {
     theme === "dark" ? setTheme("") : setTheme("dark");
   }

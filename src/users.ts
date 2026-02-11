@@ -9,6 +9,14 @@ export interface User {
 
 export const users: User[] = [
   {
+    "id": "u_0",
+    "name": "Chiikower",
+    "handle": "@hardware",
+    "avatar": "https://cdn.freebiesupply.com/logos/thumbs/2x/linux-tux-1-logo.png",
+    "bio": "I love chii kawaii",
+    "followers": 100000
+  },
+  {
     "id": "u_1",
     "name": "Marcus Chen",
     "handle": "@marcuschen",

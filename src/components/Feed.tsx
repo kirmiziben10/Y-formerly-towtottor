@@ -1,12 +1,18 @@
+import { useState } from "react";
 import "../index.css";
-//import { users } from "../users.js"
-import { tweets } from "../tweets.js";
+import { tweets as initialTweets } from "../tweets.js";
 import Widgets from "./Widgets";
 import Newpost from "./Newpost";
 import Post from "./Post";
 import type { Tweet } from "../tweets.ts"
 
 export default function Feed() {
+  const [tweetList, setTweetList] = useState<Tweet[]>(initialTweets);
+
+  function addTweet(newTweet: Tweet) {
+    setTweetList(prev => [newTweet, ...prev]);
+  }
+
   return (
     <main className="flex flex-row space-between content-between w-262.5">
       <div className="flex flex-col w-150 border-zinc-300 dark:border-zinc-800 border-r">
@@ -29,9 +35,9 @@ export default function Feed() {
           </div>
         </div>
 
-        <Newpost />
-        {(tweets as Tweet[]).map(t=>(
-          <Post key={t.id} tweet={t}/>
+        <Newpost onPost={addTweet} />
+        {tweetList.map(t => (
+          <Post key={t.id} tweet={t} />
         ))}
       </div>
       <Widgets />

@@ -1,10 +1,15 @@
-import { useContext } from 'react';
-import Sidebar from "./components/Sidebar"
-import Feed from "./components/Feed" 
-import { ThemeContext } from './ThemeContext';
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
+import { Sun, Moon } from "lucide-react";
+import "./index.css";
+import Sidebar from "./components/Sidebar";
 
 export default function Profile() {
+     const { theme, setTheme } = useContext(ThemeContext);
 
+  function manageTheme() {
+    theme === "dark" ? setTheme("") : setTheme("dark");
+  }
   return (
     <div
       className={
@@ -14,7 +19,7 @@ export default function Profile() {
     >
       <div className="w-316.25 flex flex-row min-h-screen">
         <Sidebar />
-        <Feed />
+        <h1>Profile</h1>
       </div>
 
       {/*dark-mode toggle*/}

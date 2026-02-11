@@ -3,7 +3,6 @@ import type { Tweet } from "../tweets";
 import { Heart, Repeat2, Ellipsis } from "lucide-react";
 
 export default function Post({ tweet }: { tweet: Tweet }) {
-  console.log(tweet);
   const user = users.find((user) => user.id === tweet.user_id);
   return (
     <div className="w-149.5 h-fit flex border-zinc-300 dark:border-zinc-800 border-b">
@@ -16,7 +15,7 @@ export default function Post({ tweet }: { tweet: Tweet }) {
           />
         </a>
       </div>
-      <div>
+      <div className="flex-1 min-w-0">
         <div className="flex flex-row justify-start mt-2.5 ml-2">
           <div className="cursor-pointer">
             {user?.name} <span className="opacity-50">{user?.handle}</span>
