@@ -13,6 +13,7 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/:handle" element={<Profile />} />
           <Route path="/notifications" element={<Notifications />} />
         </Routes>
       </BrowserRouter>
